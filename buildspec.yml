@@ -10,5 +10,5 @@ phases:
 artifacts:
   files:
     - target/vprofile-v2.war
-    - .ebextensions/**/*
+  
 
