@@ -9,6 +9,6 @@ phases:
       - mvn package  
 artifacts:
   files:
-    - vprofile-v2.war
+    - target/vprofile-v2.war
     - .ebextensions/**/*
 
