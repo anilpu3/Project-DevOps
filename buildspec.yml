@@ -1,22 +1,16 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
       java: corretto11
-    commands:
-      - echo Nothing to do in the install phase
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase
-  build:
-    commands:
-      - echo build started on 'date'
-      - mvn install
   post_build:
     commands:
-      - echo build completed on 'date'
+      - mvn package
+      - mv target/vprofile-v2.war vprofile-v2.war
 artifacts:
   files:
-    - target/vprofile-v2.war
+    - vprofile-v2.war
+    - .ebextensions/**/*
   
 
