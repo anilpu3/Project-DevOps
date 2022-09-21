@@ -3,11 +3,9 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corretto11
   post_build:
     commands:
-      - sudo apt update
-      - sudo apt install maven -y
       - mvn package
       - mv target/vprofile-v2.war vprofile-v2.war
 artifacts:
