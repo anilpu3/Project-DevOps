@@ -6,6 +6,8 @@ phases:
       java: corretto17
   post_build:
     commands:
+      - sudo apt update
+      - sudo apt install maven -y
       - mvn package
       - mv target/vprofile-v2.war vprofile-v2.war
 artifacts:
