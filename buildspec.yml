@@ -6,7 +6,7 @@ phases:
       java: corretto11
   post_build:
     commands:
-      - mvn package - DskipTests
+      - mvn package
       - mv target/vprofile-v2.war vprofile-v2.war
 artifacts:
   files:
