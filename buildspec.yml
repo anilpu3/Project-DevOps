@@ -7,10 +7,10 @@ phases:
   post_build:
     commands:
       - mvn package
-      - mv target/vprofile-v2.war vprofile-v2.war
+      - mv target/vprofile-v2.war ROOT.war
 artifacts:
   files:
-    - vprofile-v2.war
+    - ROOT.war
     - .ebextensions/**/*
   
 
